@@ -28,6 +28,7 @@ unplain = txt2bin(x)
 for i in range(1, len(unplain)*8+1):
     t = unplain[i // 8]
     index = i % 8
+    xor(unplain[i])
 
 
 print(txt2bin(x))
