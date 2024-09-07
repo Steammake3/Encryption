@@ -5,6 +5,9 @@ import math
 
 #def stuff(inp, s, a):
     #return (chars.find(inp)/len(chars))*s + a
+def xor(a, b):
+    return bool(int(a)) != bool(int(b))
+
 def txt2bin(s):
     out = []
     for char in s:
@@ -20,5 +23,11 @@ def key(k : float, v : float):
 
 x=" "
 #txt2bin=lambda s : [(8-len(bin(ord(w))[2:-1]))*"0"+bin(ord(w))[2:-1] for w in s]
+unplain = txt2bin(x)
+# TODO: XOR for each bit with true key
+for i in range(1, len(unplain)*8+1):
+    t = unplain[i // 8]
+    index = i % 8
+
 
 print(txt2bin(x))
