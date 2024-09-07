@@ -13,8 +13,10 @@ def txt2bin(s):
         out.append(binary)
     return out
 
-def key(k):
-    return 0
+def key(k : float, v : float):
+    """Psuedo random bit generator (deterministic)
+    k : the key, v : the position of the bit"""
+    return 1 - math.floor((k * math.pow(v, 5.2)) % 2)
 
 x=" "
 #txt2bin=lambda s : [(8-len(bin(ord(w))[2:-1]))*"0"+bin(ord(w))[2:-1] for w in s]
